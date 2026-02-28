@@ -1,0 +1,12 @@
+<h2>XSS Demo (Vulnerable)</h2>
+<input type="text" id="userInput" placeholder="Enter something">
+<button onclick="showInput()">Submit</button>
+
+<p id="output"></p>
+
+<script>
+function showInput() {
+  const input = document.getElementById("userInput").value;
+  document.getElementById("output").innerHTML = input;
+}
+</script>
